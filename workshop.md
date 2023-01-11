@@ -7,7 +7,7 @@
 2. Run `npm install -g @angular/cli`
 3. Check of je Angular versie 15 globaal installed hebt met `ng v`
 4. Open een folder waar je de Angular applicatie wil installeren
-5. Run `npm install -g @angular/cli`
+5. Run `ng new angular-workshop`
 6. Gebruik SCSS als stylesheet
 
 ## @Component
