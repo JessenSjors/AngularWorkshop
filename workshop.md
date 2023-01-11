@@ -24,3 +24,9 @@
 - Enigszins vergelijkbaar met `serializeField` van Unity
 - Maakt het mogelijk om van 'buitenaf' de *component* informatie als input mee te geven
 - Op deze wijze kan vanuit een parent component data doorgestuurd worden naar een child component (een component kan namelijk niet data onttrekken uit een andere component)
+
+## Observables
+- Komt van Rxjs library
+- Werkt hetzelfde als observer pattern
+- Je kunt je subscriben aan de observable; wanneer de observable data (bv. in de backend) wijzigt, dan zal dit ook automatisch in de front-end updaten
+- Laat OPK zien met Firebase database m.b.t. de *documents* hoe dit automatisch update
