@@ -2,6 +2,14 @@
 
 --- 
 
+## Installation
+1. Open terminal
+2. Run `npm install -g @angular/cli`
+3. Check of je Angular versie 15 globaal installed hebt met `ng v`
+4. Open een folder waar je de Angular applicatie wil installeren
+5. Run `npm install -g @angular/cli`
+6. Gebruik SCSS als stylesheet
+
 ## @Component
 - Decorator (Design pattern)
 - Koppelt metadata aan een class - in dit geval om een compoennt te definieren. Voorbeeld van de metadat zijn *lifecycle methods* zoals `OnInit`
