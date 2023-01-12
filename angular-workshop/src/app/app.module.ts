@@ -15,13 +15,19 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
 
+import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
+import { MapboxComponent } from './mapbox/mapbox.component';
+
 @NgModule({
   imports: [
+    
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-
+    NgxMapboxGLModule.withConfig({
+      accessToken: 'pk.eyJ1Ijoic2pvcnNqZXNzZW4iLCJhIjoiY2xjdG5jNzI5MGZhdjNvcXRrazZ5ajBmOCJ9.lHEmPSLcgEV0aBUUCZ4LyQ',
+    }),
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
@@ -35,7 +41,8 @@ import { MessagesComponent } from './messages/messages.component';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    MapboxComponent
   ],
   bootstrap: [ AppComponent ]
 })

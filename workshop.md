@@ -12,7 +12,8 @@
 
 ## @Component
 - Decorator (Design pattern)
-- Koppelt metadata aan een class - in dit geval om een compoennt te definieren. Voorbeeld van de metadat zijn *lifecycle methods* zoals `OnInit`
+- Vergelijkbaar met een attribute in Unity: zie de component decorator een beetje als een *monobehaviour attribute*
+- Koppelt metadata aan een class - in dit geval om een compoennt te definieren. Voorbeeld van de metadata zijn *lifecycle methods* zoals `OnInit`
 
 ## Pipes
 ![Pipe](angular-workshop/src/assets/images/pipe.png)
