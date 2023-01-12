@@ -39,9 +39,11 @@
 
 ## Directives
 
-![Directives](https://miro.medium.com/max/640/1*2EJVQKbLNmncFX2L0lLKyw.webp)
+Angular directives worden gebruikt om de kracht van HTML uit te breiden door het een nieuwe syntax te geven. Het creëert DOM-elementen, verandert hun structuur of hun gedrag.
 
 ### [Directive Types](https://medium.com/@tanvishah1409/beginner-in-angular-types-of-angular-directives-f5171e6bfdce)
+
+![Directives](https://miro.medium.com/max/640/1*2EJVQKbLNmncFX2L0lLKyw.webp)
 
 - **Component**: directive met een template
 - **Structure directives**: veranderen layout van elements; `*ngIf` en `*ngFor` zijn voorbeelden hiervan
@@ -71,3 +73,7 @@
   - `npm install --save-dev @angular-three/schematics`
   - `npm install @angular-three/core three@~0.142`
   - `npm install --save-dev @types/three@~0.142`
+
+## Modules
+
+## PrimeNg & Component libraries
