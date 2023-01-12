@@ -17,6 +17,7 @@ import { MessagesComponent } from './messages/messages.component';
 
 import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
 import { MapboxComponent } from './mapbox/mapbox.component';
+import { MapboxMarkersControllerComponent } from './mapbox-markers-controller/mapbox-markers-controller.component';
 
 @NgModule({
   imports: [
@@ -42,7 +43,8 @@ import { MapboxComponent } from './mapbox/mapbox.component';
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
-    MapboxComponent
+    MapboxComponent,
+    MapboxMarkersControllerComponent
   ],
   bootstrap: [ AppComponent ]
 })

@@ -1,0 +1,7 @@
+<mgl-marker [lngLat]="[0, 0]" [draggable]="true" (markerDragEnd)="onDragEnd($event)"></mgl-marker>
+<mgl-control *ngIf="coordinates" position="bottom-left">
+    <div [style]="{padding: '5px', border: 'thin lightgray solid'}">
+        <div>Longitude:&nbsp;{{ coordinates[0] }}</div>
+        <div>Latitude:&nbsp;{{ coordinates[1] }}</div>
+    </div>
+</mgl-control>
