@@ -14,6 +14,9 @@
   - [Mapbox \& ngx-mapbox](#mapbox--ngx-mapbox)
   - [ThreeJS \& NG3](#threejs--ng3)
   - [PrimeNg \& Component libraries](#primeng--component-libraries)
+  - [Nawoord](#nawoord)
+    - [Pluspunten](#pluspunten)
+    - [Minpunten](#minpunten)
 
 ## Angular
 
@@ -136,3 +139,20 @@ Angular directives worden gebruikt om de kracht van HTML uit te breiden door het
 - Waarborgt uniformiteit, herkenbaarheid en consistentie in het design richting je gebruikers — verbetert in het algemeen de usability van de website volgens UX richtlijnen
 - Extra informatie over hoe PrimeNg ingezet kan worden in onze web app is te vinden op onze [styleguide pagina](https://styleguide.movares.net)
   
+## Nawoord
+
+Wat zijn nu de voordelen en nadelen van het gebruik van Angular in combinatie met deze libraries t.o.v. een engine als Unity?
+
+### Pluspunten
+
+- Distributie: bereik van de applicatie is groter en laagdrempeliger om in gebruik te nemen
+- Cross platform: Unity biedt vele cross platform mogelijkheden, maar nog niet op het niveau van een website uitrollen die bruikbaar is op alle apparaten
+- Aanpassingen zijn doorgaans meer flexibel vanwege de tekstuele uitwerkingen van features
+- Externe, bekende libraries en packages zijn vaak van enorm hoge kwaliteit door het massaal aantal gebruikers (bv. Web Mapbox vs. Unity Mapbox)
+- Erg wendbaar wat betreft het koppelen van je web app aan andere systemen zoals servers, api's, databases, etc.
+  
+### Minpunten
+
+- Kan meer tijd kosten om componenten en diens layout uit te werken omdat je geen editor hebt (vrijwel alles moet tekstueel uitgewerkt worden)
+- Hoewel met WebGL levendige en interactieve scenes ontwikkeld kan worden, kan het niet tippen aan de 3D features die Unity aanbiedt
+- Processing power van een website heeft meer beperkingen dan een standalone applicatie
