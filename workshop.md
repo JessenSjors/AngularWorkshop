@@ -1,5 +1,11 @@
 ﻿# Angular workshop
 
+Deze workshop is toegespitst op het visualiseren van 3D en data in web apps. Dit vanwege onze eigen werkzaamheden, maar ook met het oog op onze toekomstige samenwerking met het data team.
+
+---
+
+**Inhoudstabel**
+
 - [Angular workshop](#angular-workshop)
   - [Angular](#angular)
   - [Installation](#installation)
@@ -8,15 +14,18 @@
   - [Pipes](#pipes)
   - [@Input](#input)
   - [@Output](#output)
-  - [Observables](#observables)
+  - [Services](#services)
   - [Directives](#directives)
     - [Directive Types](#directive-types)
+  - [Angular fundamentale concepten](#angular-fundamentale-concepten)
+  - [Observables](#observables)
   - [Mapbox \& ngx-mapbox](#mapbox--ngx-mapbox)
   - [ThreeJS \& NG3](#threejs--ng3)
   - [PrimeNg (component library)](#primeng-component-library)
   - [Nawoord](#nawoord)
     - [Pluspunten](#pluspunten)
     - [Minpunten](#minpunten)
+  - [Vervolg](#vervolg)
 
 ## Angular
 
@@ -39,7 +48,7 @@
 
 ## @Component
 
-- Decorator (Design pattern)
+- Is een Decorator (design pattern)
 - Vergelijkbaar met een attribute in Unity: zie de component decorator een beetje als een *monobehaviour attribute*
 - Koppelt metadata aan een class - in dit geval om een compoennt te definieren. Voorbeeld van de metadata zijn *lifecycle methods* zoals `OnInit`
 
@@ -81,15 +90,17 @@
 Voorbeeld van zowel *Input* als *Output* data flow tussen *Child* en een *Parent*
 ![output-input-dataflow](https://angular.io/generated/images/guide/inputs-outputs/input-output-diagram.svg)
 
-## Observables
+## Services
 
-[RxJS](https://rxjs.dev/guide/overview) is een library voor het samenstellen van asynchrone en event-based programma's door het gebruik van *observable sequences*. RxJS biedt een core type, de **Observable**, satellite types (Observer, Schedulers, Subjects) en operators geïnspireerd door `Array` methods (`map`, `filter`, `reduce`, `every`, etc) die *asynchronous events* afhandelen als *collections*.
+Een [service](https://angular.io/guide/architecture-services) is gebruikelijk een *class* met een toegespitst, goed gedefinieerd doel. "It should do something specific and do it well" (Single Responsibility principe).
 
-- Vergelijkbaar met *observer pattern*
-- Je kunt je subscriben aan de observable; wanneer de observable data (bv. in de backend) wijzigt, dan zal dit ook automatisch in de front-end updaten
-- Voorbeeld: je front-end weergeeft data uit een database. De database date update uiteraard regelmatig en deze changes moeten dan automatisch zichtbaar zijn in je front-end.
+![Service](https://angular.io/generated/images/guide/architecture/injector-injects.png)
 
-> Laat OPK zien met Firebase database m.b.t. de *documents* hoe dit automatisch update
+- Is een decorator die gebasseerd is op het *Dependency Injection* design pattern
+- Kun je injecteren in een *component* of andere *service* via diens `constuctor`
+- Een component gebruikt services voor taken waarbij de *view* of *application logic* niet komt kijken
+- Services zijn goed in taken als het *fetchen* van data van een server, het valideren van user input, of om direct naar de console te loggen
+- Door zulke taken uit te werken in een *injectable* service class, kun je die taken (of functionaliteit) beschikbaar stellen aan iedere component
 
 ## Directives
 
@@ -107,6 +118,22 @@ Angular directives worden gebruikt om de kracht van HTML uit te breiden door het
   - Zou je kunnen gebruiken voor iets als een generieke *[highlighter](https://angular.io/guide/attribute-directives)* of *dropzone* functionaliteit dat gekoppeld kan worden aan HTML components
 
 ![Directive](https://angular.io/generated/images/guide/attribute-directives/highlight-directive-final-anim.gif)
+
+## Angular fundamentale concepten
+
+Hieronder een korte samenvatting van alle fundamentele concepten van Angular en hoe ze onderling aan elkaar relateren.
+
+![Angular-fundamentals](https://angular.io/generated/images/guide/architecture/overview2.png)
+
+## Observables
+
+[RxJS](https://rxjs.dev/guide/overview) is een library voor het samenstellen van asynchrone en event-based programma's door het gebruik van *observable sequences*. RxJS biedt een core type, de **Observable**, satellite types (Observer, Schedulers, Subjects) en operators geïnspireerd door `Array` methods (`map`, `filter`, `reduce`, `every`, etc) die *asynchronous events* afhandelen als *collections*.
+
+- Vergelijkbaar met *observer pattern*
+- Je kunt je subscriben aan de observable; wanneer de observable data (bv. in de backend) wijzigt, dan zal dit ook automatisch in de front-end updaten
+- Voorbeeld: je front-end weergeeft data uit een database. De database date update uiteraard regelmatig en deze changes moeten dan automatisch zichtbaar zijn in je front-end.
+
+> Laat OPK zien met Firebase database m.b.t. de *documents* hoe dit automatisch update
 
 ## Mapbox & ngx-mapbox
 
@@ -158,3 +185,13 @@ Wat zijn nu de voordelen en nadelen van het gebruik van Angular in combinatie me
 - Kan meer tijd kosten om componenten en diens layout uit te werken omdat je geen editor hebt (vrijwel alles moet tekstueel uitgewerkt worden)
 - Hoewel met WebGL levendige en interactieve scenes ontwikkeld kunnen worden, kan het niet tippen aan de 3D features en graphics die Unity aanbiedt
 - Processing power van een website heeft meer beperkingen dan een standalone applicatie
+
+## Vervolg
+
+Zijn er nog andere technieken die wel graag willen bespreken (in relatie tot Angular of web apps) in een andere sessie? Topics zoals:
+
+- Het koppelen van een database en weergeven van diens data
+- Het zenden van API requests en ontvangen van responses
+- Opzetten van en communiceren met een back-end zoals ASP .NET of Flask/Django (deze laatste zijn interessant vanwege het achterliggende Python ecosysteem)
+- Geautomatiseerd testen met Cypress
+- Iets anders...
