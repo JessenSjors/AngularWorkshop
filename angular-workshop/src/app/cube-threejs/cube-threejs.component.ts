@@ -15,7 +15,7 @@ export class CubeThreejsComponent implements OnInit, AfterViewInit {
   @Input() public rotationSpeedX: number = 0.05;
   @Input() public rotationSpeedY: number = 0.01;
   @Input() public size: number = 200;
-  @Input() public texture: string = "/assets/texture.jpg";
+  @Input() public texture: string = "/assets/models/textures/texture.jpg";
 
   //* Stage Properties
   @Input() public cameraZ: number = 400;
