@@ -1,2 +1,13 @@
-<p-inputNumber [(ngModel)]="rotationSpeedX" mode="decimal"></p-inputNumber>
+<div class="grid p-fluid">
+    <div class="field col-12 md:col-3">
+        <label for="rotationX">Rotation X speed</label>
+        <p-inputNumber inputId="rotationX" [(ngModel)]="rotationSpeedX" mode="decimal"></p-inputNumber>
+    </div>
+    <div class="field col-12 md:col-3">
+        <label for="rotationY">Rotation Y speed</label>
+        <p-inputNumber inputId="rotationY" [(ngModel)]="rotationSpeedY" mode="decimal"></p-inputNumber>
+    </div>
+</div>
+
+<p-button label="Save"></p-button>
 <canvas #canvas id="canvas" width="100vw" height="100vh">

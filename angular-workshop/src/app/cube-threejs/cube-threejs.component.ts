@@ -13,7 +13,7 @@ export class CubeThreejsComponent implements OnInit, AfterViewInit {
 
   //* Cube Properties
   public rotationSpeedX: number = 0.05;
-  @Input() public rotationSpeedY: number = 0.01;
+  public rotationSpeedY: number = 0.01;
   @Input() public size: number = 200;
   @Input() public texture: string = "/assets/models/textures/texture.jpg";
 
