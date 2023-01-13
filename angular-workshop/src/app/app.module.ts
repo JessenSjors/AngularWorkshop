@@ -25,6 +25,7 @@ import { HeroSearchComponent } from './components/hero-tutorial/hero-search/hero
 import { MapboxMarkersControllerComponent } from './components/mapbox-example/mapbox-markers-controller/mapbox-markers-controller.component';
 import { CubeThreejsComponent } from './components/three-js-examples/cube-threejs/cube-threejs.component';
 import { ItemOutputContainerComponent } from './components/output-example/item-output-container/item-output-container.component';
+import { HeroService } from './components/hero-tutorial/hero.service';
 
 @NgModule({
   imports: [
@@ -60,6 +61,7 @@ import { ItemOutputContainerComponent } from './components/output-example/item-o
     HighlightDirective,
     DirectiveExampleComponent,
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [HeroService]
 })
 export class AppModule { }
