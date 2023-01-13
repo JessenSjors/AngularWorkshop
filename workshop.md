@@ -1,5 +1,22 @@
 ﻿# Angular workshop
 
+- [Angular workshop](#angular-workshop)
+  - [Angular](#angular)
+  - [Installation](#installation)
+  - [@Component](#component)
+  - [Pipes](#pipes)
+  - [@Input](#input)
+  - [@Output](#output)
+  - [Observables](#observables)
+  - [Directives](#directives)
+    - [Directive Types](#directive-types)
+  - [Mapbox \& ngx-mapbox](#mapbox--ngx-mapbox)
+  - [ThreeJS \& NG3](#threejs--ng3)
+  - [Modules](#modules)
+  - [PrimeNg \& Component libraries](#primeng--component-libraries)
+
+## Angular
+
 [Angular](https://angular.io/docs) is een application-design framework en development platform voor het ontwikkelen van efficiënte en complexe single-page applicaties.
 
 **Traditionele website**
@@ -27,8 +44,8 @@
 
 ![Pipe](angular-workshop/src/assets/images/pipe.png)
 
-- *Pipes* kun je inzetten om data te converteren of formatteren naar bijvoorbeeld string, valuta's, datum en andere datatypes
-- Je kunt ook custom pipes maken (bv. conversie van platte tekst naar HTML of voor vertalingen)
+- **Pipes** kun je inzetten om data te converteren of formatteren naar bijvoorbeeld string, valuta's, datum en andere datatypes
+- Je kunt ook [custom pipes](https://angular.io/guide/pipes-custom-data-trans) maken zoals een conversie van platte tekst naar HTML, of voor vertalingen
 
 ## @Input
 
@@ -38,12 +55,28 @@
 - Maakt het mogelijk om van 'buitenaf' de *component* informatie als input mee te geven
 - Op deze wijze kan vanuit een parent component data doorgestuurd worden naar een child component (een component kan namelijk niet data onttrekken uit een andere component)
 
+![Input-data-transfer](https://angular.io/generated/images/guide/inputs-outputs/input-diagram-target-source.svg)
+
+## @Output
+
+![Output](https://angular.io/generated/images/guide/inputs-outputs/output.svg)
+
+- [Output](https://angular.io/guide/inputs-outputs) kan gebruikt worden om data van een *child* naar een *parent* te sturen
+- Manier om content te updaten in de parent zonder een *service* of iets dergelijks te hoeven gebruiken
+- Kan opgesteld worden met behulp van `@Output` en `EventEmitter`
+
+Voorbeeld van zowel *Input* als *Output* data flow tussen *Child* en een *Parent*
+![output-input-dataflow](https://angular.io/generated/images/guide/inputs-outputs/input-output-diagram.svg)
+
 ## Observables
 
-- Komt van Rxjs library
-- Werkt hetzelfde als observer pattern
+[RxJS](https://rxjs.dev/guide/overview) is een library voor het samenstellen van asynchrone en event-based programma's door het gebruik van *observable sequences*. RxJS biedt een core type, de **Observable**, satellite types (Observer, Schedulers, Subjects) en operators geïnspireerd door `Array` methods (`map`, `filter`, `reduce`, `every`, etc) die *asynchronous events* afhandelen als *collections*.
+
+- Vergelijkbaar met *observer pattern*
 - Je kunt je subscriben aan de observable; wanneer de observable data (bv. in de backend) wijzigt, dan zal dit ook automatisch in de front-end updaten
-- Laat OPK zien met Firebase database m.b.t. de *documents* hoe dit automatisch update
+- Voorbeeld: je front-end weergeeft data uit een database. De database date update uiteraard regelmatig en deze changes moeten dan automatisch zichtbaar zijn in je front-end.
+
+> Laat OPK zien met Firebase database m.b.t. de *documents* hoe dit automatisch update
 
 ## Directives
 
@@ -58,7 +91,7 @@ Angular directives worden gebruikt om de kracht van HTML uit te breiden door het
 - **Attribute directive**:
   - Generieke functionaliteit die je aan een HTML component toe kan voegen
   - Vergelijkbaar met bijvoorbeeld `IPointerEnterHandler` uit Unity
-  - Zou je kunnen gebruiken voor iets als een generieke *highlighter* of *dropzone* functionaliteit voor HTML components
+  - Zou je kunnen gebruiken voor iets als een generieke *highlighter* of *dropzone* functionaliteit dat gekoppeld kan worden aan HTML components
 
 ## Mapbox & ngx-mapbox
 
@@ -83,7 +116,6 @@ Angular directives worden gebruikt om de kracht van HTML uit te breiden door het
   - `npm install @angular-three/core three@~0.142`
   - `npm install --save-dev @types/three@~0.142`
 
-
 ## Modules
 
 ## PrimeNg & Component libraries
@@ -94,4 +126,3 @@ Angular directives worden gebruikt om de kracht van HTML uit te breiden door het
 - Waarborgt uniformiteit, herkenbaarheid en consistentie in het design richting je gebruikers — verbetert in het algemeen de usability van de website volgens UX richtlijnen
 - Extra informatie over hoe PrimeNg ingezet kan worden in onze web app is te vinden op onze [styleguide pagina](https://styleguide.movares.net)
   
-## @Output

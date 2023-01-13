@@ -6,6 +6,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MapboxComponent } from './mapbox/mapbox.component';
 import { BasicThreejsComponent } from './basic-threejs/basic-threejs.component';
 import { CubeThreejsComponent } from './cube-threejs/cube-threejs.component';
+import { ItemOutputContainerComponent } from './item-output-container/item-output-container.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'mapbox', component: MapboxComponent },
   { path: 'three-js', component: BasicThreejsComponent },
   { path: 'cube-three-js', component: CubeThreejsComponent },
+  { path: 'item-output', component: ItemOutputContainerComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

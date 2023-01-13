@@ -21,6 +21,8 @@ import { MapboxMarkersControllerComponent } from './mapbox-markers-controller/ma
 import { BasicThreejsComponent } from './basic-threejs/basic-threejs.component';
 import { Ng3Component } from './ng3/ng3.component';
 import { CubeThreejsComponent } from './cube-threejs/cube-threejs.component';
+import { ItemOutputComponent } from './item-output/item-output.component';
+import { ItemOutputContainerComponent } from './item-output-container/item-output-container.component';
 
 @NgModule({
   imports: [
@@ -50,7 +52,9 @@ import { CubeThreejsComponent } from './cube-threejs/cube-threejs.component';
     MapboxMarkersControllerComponent,
     BasicThreejsComponent,
     Ng3Component,
-    CubeThreejsComponent
+    CubeThreejsComponent,
+    ItemOutputComponent,
+    ItemOutputContainerComponent
   ],
   bootstrap: [ AppComponent ]
 })

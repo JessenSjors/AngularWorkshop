@@ -1,0 +1,6 @@
+<h2>Item container</h2>
+<ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+
+<app-item-output (newItemEvent)="addItemToContainer($event)"></app-item-output>
