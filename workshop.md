@@ -4,6 +4,7 @@
   - [Angular](#angular)
   - [Installation](#installation)
   - [@Component](#component)
+  - [Modules](#modules)
   - [Pipes](#pipes)
   - [@Input](#input)
   - [@Output](#output)
@@ -12,7 +13,6 @@
     - [Directive Types](#directive-types)
   - [Mapbox \& ngx-mapbox](#mapbox--ngx-mapbox)
   - [ThreeJS \& NG3](#threejs--ng3)
-  - [Modules](#modules)
   - [PrimeNg \& Component libraries](#primeng--component-libraries)
 
 ## Angular
@@ -39,6 +39,16 @@
 - Decorator (Design pattern)
 - Vergelijkbaar met een attribute in Unity: zie de component decorator een beetje als een *monobehaviour attribute*
 - Koppelt metadata aan een class - in dit geval om een compoennt te definieren. Voorbeeld van de metadata zijn *lifecycle methods* zoals `OnInit`
+
+## Modules
+
+[NgModules](https://angular.io/guide/architecture-modules) zijn containers voor een samenhangend codeblok dat is toegewezen aan een applicatie domein, een workflow of een nauw verwante reeks mogelijkheden.
+
+![Modules](https://juristr.com/blog/assets/imgs/angular-modules/module-structure-example.png)
+
+- Enigszins vergelijkbaar met een `namespace`; je bakent modules en components die behoren aan een onderdeel af van de andere onderdelen van de applicatie
+- Kunnen *components*, *service providers*, en andere code files bevatten afhankelijk van hun scope
+- Kunnen functionaliteit importeren wat geëxporteerd is uit andere NgModules, en kunnen zelf specificieke functionaliteit exporteren wat gebruikt kan worden door andere NgModules
 
 ## Pipes
 
@@ -116,9 +126,9 @@ Angular directives worden gebruikt om de kracht van HTML uit te breiden door het
   - `npm install @angular-three/core three@~0.142`
   - `npm install --save-dev @types/three@~0.142`
 
-## Modules
-
 ## PrimeNg & Component libraries
+
+![PrimeNg](https://i.stack.imgur.com/TzM6H.png)
 
 - Bevat [componenten](https://www.primefaces.org/primeng/button) met dezelfde look & feel
 - Biedt kant-en-klare componenten aan met een specifieke data input opties, functionaliteit en styling die je eraan kan binden
