@@ -8,7 +8,8 @@ Deze workshop is toegespitst op het visualiseren van 3D en data in web apps. Dit
 
 - [Angular workshop](#angular-workshop)
   - [Angular](#angular)
-  - [Installation](#installation)
+  - [NPM en node packages](#npm-en-node-packages)
+  - [Angular installation](#angular-installation)
   - [@Component](#component)
   - [Modules](#modules)
   - [Pipes](#pipes)
@@ -37,7 +38,14 @@ Deze workshop is toegespitst op het visualiseren van 3D en data in web apps. Dit
 **Single-page applicatie (SPA)**
 ![SPA](https://br-cms.bloomreach.com/site/binaries/content/gallery/br_singlepage_application_1.gif)
 
-## Installation
+## NPM en node packages
+
+- Node package manager (NPM) is een manager waarmee je de node packages in je applicatie kunt beheren. Vergelijkbaar met Unity's package manager of Nuget package manager
+- Installeer [Node.js](https://nodejs.org/en/) om node packages te kunnen installeren via NPM commands in de terminal
+- Packages en diens versies worden bijgehouden in *package.json* (vergelijkbaar met Unity's manifest.json), hier kun je ook wijzigingen aan toe brengen
+- Je installeert een nieuwe node package via terminal m.b.v. `npm install [package-naam]`, deze package wordt dan geïnstalleerd in de *node_modules* folder
+
+## Angular installation
 
 1. Open terminal
 2. Run `npm install -g @angular/cli`
@@ -45,12 +53,14 @@ Deze workshop is toegespitst op het visualiseren van 3D en data in web apps. Dit
 4. Open een folder waar je de Angular applicatie wil installeren
 5. Run `ng new angular-workshop`
 6. Gebruik **SCSS** als stylesheet en gebruik **Router**
-
+  
 ## @Component
 
 - Is een Decorator (design pattern)
 - Vergelijkbaar met een attribute in Unity: zie de component decorator een beetje als een *monobehaviour attribute*
 - Koppelt metadata aan een class - in dit geval om een compoennt te definieren. Voorbeeld van de metadata zijn *lifecycle methods* zoals `OnInit`
+- Om een *Component* te maken gaan we we vanuit de *root* folder van ons project in de *app* folder. Dit doen we via de terminal (gebruik `cd [folder-naam]` om van directory te switchen)
+- Nu kunnen we een component aanmaken m.b.v. `ng generate compont [component-naam]`
 
 ## Modules
 
@@ -68,6 +78,7 @@ Deze workshop is toegespitst op het visualiseren van 3D en data in web apps. Dit
 
 - **Pipes** kun je inzetten om data te converteren of formatteren naar bijvoorbeeld string, valuta's, datum en andere datatypes
 - Je kunt ook [custom pipes](https://angular.io/guide/pipes-custom-data-trans) maken zoals een conversie van platte tekst naar HTML, of voor vertalingen
+- Een custom pipe kun je aanmaken via de terminal (in de *app* directory) m.b.v. `ng generate pipe [pipe-naam]`
 
 ## @Input
 
@@ -97,6 +108,7 @@ Een [service](https://angular.io/guide/architecture-services) is gebruikelijk ee
 ![Service](https://angular.io/generated/images/guide/architecture/injector-injects.png)
 
 - Is een decorator die gebasseerd is op het *Dependency Injection* design pattern
+- Kun je aanmaken via de terminal (in de *app* directory) m.b.v. `ng generate service [service-naam]`
 - Kun je injecteren in een *component* of andere *service* via diens `constuctor`
 - Een component gebruikt services voor taken waarbij de *view* of *application logic* niet komt kijken
 - Services zijn goed in taken als het *fetchen* van data van een server, het valideren van user input, of om direct naar de console te loggen
@@ -116,6 +128,7 @@ Angular directives worden gebruikt om de kracht van HTML uit te breiden door het
   - Generieke functionaliteit die je aan een HTML component toe kan voegen
   - Vergelijkbaar met bijvoorbeeld `IPointerEnterHandler` uit Unity
   - Zou je kunnen gebruiken voor iets als een generieke *[highlighter](https://angular.io/guide/attribute-directives)* of *dropzone* functionaliteit dat gekoppeld kan worden aan HTML components
+- Kun je aanmaken via de terminal (in de *app* directory) m.b.v. `ng generate directive [directive-naam]`
 
 ![Directive](https://angular.io/generated/images/guide/attribute-directives/highlight-directive-final-anim.gif)
 
