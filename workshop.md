@@ -1,4 +1,12 @@
-﻿# Workshop
+﻿# Angular workshop
+
+[Angular](https://angular.io/docs) is een application-design framework en development platform voor het ontwikkelen van efficiënte en complexe single-page applicaties.
+
+**Traditionele website**
+![Traditioneel](https://br-cms.bloomreach.com/site/binaries/content/gallery/br_traditional_1.gif)
+
+**Single-page applicatie (SPA)**
+![SPA](https://br-cms.bloomreach.com/site/binaries/content/gallery/br_singlepage_application_1.gif)
 
 ## Installation
 
@@ -69,11 +77,15 @@ Angular directives worden gebruikt om de kracht van HTML uit te breiden door het
 - **ThreeJS** kan ook in samenwerking met Mapbox gebruikt worden om bijvoorbeeld 3D modellen op een map te renderen of markers met daarin panorama afbeeldingen toe te voegen (zoals in de **[Omgevings Plankaart](https://producten.movares-visuals.nl/3D_Webportaal)**)
 - Een 'Vanilla ThreeJs implementatie' in Angular kan echter al snel veel overhead veroorzaken in je *components*
 - **NG3** is alternatief; werkt vergelijkbaar met hoe je templates op basis van *directives* uitwerkt in Angular
-- NG3 kun je installen door de volgende commands te runnen in je terminal:
+- [NG3 Sandbox Examples](https://angular-three.netlify.app/examples/home)
+- NG3 kun je [installen](https://angular-three.netlify.app/docs/getting-started/installation) door de volgende commands te runnen in je terminal:
   - `npm install --save-dev @angular-three/schematics`
   - `npm install @angular-three/core three@~0.142`
   - `npm install --save-dev @types/three@~0.142`
 
+
 ## Modules
 
 ## PrimeNg & Component libraries
+
+## @Output
