@@ -88,4 +88,10 @@ Angular directives worden gebruikt om de kracht van HTML uit te breiden door het
 
 ## PrimeNg & Component libraries
 
+- Bevat [componenten](https://www.primefaces.org/primeng/button) met dezelfde look & feel
+- Biedt kant-en-klare componenten aan met een specifieke data input opties, functionaliteit en styling die je eraan kan binden
+- Customizable naar een bepaald thema (bv. volgens een stijlgids)
+- Waarborgt uniformiteit, herkenbaarheid en consistentie in het design richting je gebruikers — verbetert in het algemeen de usability van de website volgens UX richtlijnen
+- Extra informatie over hoe PrimeNg ingezet kan worden in onze web app is te vinden op onze [styleguide pagina](https://styleguide.movares.net)
+  
 ## @Output
