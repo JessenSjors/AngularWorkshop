@@ -13,7 +13,7 @@
     - [Directive Types](#directive-types)
   - [Mapbox \& ngx-mapbox](#mapbox--ngx-mapbox)
   - [ThreeJS \& NG3](#threejs--ng3)
-  - [PrimeNg \& Component libraries](#primeng--component-libraries)
+  - [PrimeNg (component library)](#primeng-component-library)
   - [Nawoord](#nawoord)
     - [Pluspunten](#pluspunten)
     - [Minpunten](#minpunten)
@@ -129,7 +129,7 @@ Angular directives worden gebruikt om de kracht van HTML uit te breiden door het
   - `npm install @angular-three/core three@~0.142`
   - `npm install --save-dev @types/three@~0.142`
 
-## PrimeNg & Component libraries
+## PrimeNg (component library)
 
 ![PrimeNg](https://i.stack.imgur.com/TzM6H.png)
 
@@ -154,5 +154,5 @@ Wat zijn nu de voordelen en nadelen van het gebruik van Angular in combinatie me
 ### Minpunten
 
 - Kan meer tijd kosten om componenten en diens layout uit te werken omdat je geen editor hebt (vrijwel alles moet tekstueel uitgewerkt worden)
-- Hoewel met WebGL levendige en interactieve scenes ontwikkeld kan worden, kan het niet tippen aan de 3D features die Unity aanbiedt
+- Hoewel met WebGL levendige en interactieve scenes ontwikkeld kunnen worden, kan het niet tippen aan de 3D features en graphics die Unity aanbiedt
 - Processing power van een website heeft meer beperkingen dan een standalone applicatie
