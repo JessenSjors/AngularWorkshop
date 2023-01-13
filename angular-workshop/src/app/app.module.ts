@@ -18,6 +18,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
 import { MapboxComponent } from './mapbox/mapbox.component';
 import { MapboxMarkersControllerComponent } from './mapbox-markers-controller/mapbox-markers-controller.component';
+import { BasicThreejsComponent } from './basic-threejs/basic-threejs.component';
+import { Ng3Component } from './ng3/ng3.component';
 
 @NgModule({
   imports: [
@@ -44,7 +46,9 @@ import { MapboxMarkersControllerComponent } from './mapbox-markers-controller/ma
     MessagesComponent,
     HeroSearchComponent,
     MapboxComponent,
-    MapboxMarkersControllerComponent
+    MapboxMarkersControllerComponent,
+    BasicThreejsComponent,
+    Ng3Component
   ],
   bootstrap: [ AppComponent ]
 })
