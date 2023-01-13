@@ -23,6 +23,8 @@ import { Ng3Component } from './ng3/ng3.component';
 import { CubeThreejsComponent } from './cube-threejs/cube-threejs.component';
 import { ItemOutputComponent } from './item-output/item-output.component';
 import { ItemOutputContainerComponent } from './item-output-container/item-output-container.component';
+import { HighlightDirective } from './highlight.directive';
+import { DirectiveExampleComponent } from './directive-example/directive-example.component';
 
 @NgModule({
   imports: [
@@ -54,7 +56,9 @@ import { ItemOutputContainerComponent } from './item-output-container/item-outpu
     Ng3Component,
     CubeThreejsComponent,
     ItemOutputComponent,
-    ItemOutputContainerComponent
+    ItemOutputContainerComponent,
+    HighlightDirective,
+    DirectiveExampleComponent
   ],
   bootstrap: [ AppComponent ]
 })

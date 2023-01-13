@@ -104,7 +104,9 @@ Angular directives worden gebruikt om de kracht van HTML uit te breiden door het
 - **Attribute directive**:
   - Generieke functionaliteit die je aan een HTML component toe kan voegen
   - Vergelijkbaar met bijvoorbeeld `IPointerEnterHandler` uit Unity
-  - Zou je kunnen gebruiken voor iets als een generieke *highlighter* of *dropzone* functionaliteit dat gekoppeld kan worden aan HTML components
+  - Zou je kunnen gebruiken voor iets als een generieke *[highlighter](https://angular.io/guide/attribute-directives)* of *dropzone* functionaliteit dat gekoppeld kan worden aan HTML components
+
+![Directive](https://angular.io/generated/images/guide/attribute-directives/highlight-directive-final-anim.gif)
 
 ## Mapbox & ngx-mapbox
 
