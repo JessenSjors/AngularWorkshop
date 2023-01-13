@@ -179,6 +179,10 @@ Hieronder een korte samenvatting van alle fundamentele concepten van Angular en 
 - Biedt kant-en-klare componenten aan met een specifieke data input opties, functionaliteit en styling die je eraan kan binden
 - Customizable naar een bepaald thema (bv. volgens een stijlgids)
 - Waarborgt uniformiteit, herkenbaarheid en consistentie in het design richting je gebruikers — verbetert in het algemeen de usability van de website volgens UX richtlijnen
+- PrimeNg [installeer](https://www.primefaces.org/primeng/setup) en importeer je in je project op de volgende wijze:
+  1. Run de commands `npm install primeng --save` en `npm install primeicons --save` in de terminal
+  2. Importeer de componenten die je wil gebruiken in de **app.module**. Voorbeeld: `import {AccordionModule} from 'primeng/accordion';`
+  3. Voeg het gewenste PrimeNg thema toe in **angular.json**. Voorbeeld: `"styles": ["node_modules/primeicons/primeicons.css", "node_modules/primeng/resources/themes/lara-light-blue/theme.css", "node_modules/primeng/resources/primeng.min.css"]`
 - Extra informatie over hoe PrimeNg ingezet kan worden in onze web app is te vinden op onze [styleguide pagina](https://styleguide.movares.net)
   
 ## Nawoord

@@ -25,6 +25,7 @@ import { ItemOutputComponent } from './item-output/item-output.component';
 import { ItemOutputContainerComponent } from './item-output-container/item-output-container.component';
 import { HighlightDirective } from './highlight.directive';
 import { DirectiveExampleComponent } from './directive-example/directive-example.component';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 @NgModule({
   imports: [
@@ -41,7 +42,8 @@ import { DirectiveExampleComponent } from './directive-example/directive-example
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    InputNumberModule
   ],
   declarations: [
     AppComponent,
