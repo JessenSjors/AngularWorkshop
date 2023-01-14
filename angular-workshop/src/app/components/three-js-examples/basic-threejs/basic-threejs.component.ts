@@ -69,12 +69,7 @@ export class BasicThreejsComponent {
    * @memberof ModelComponent
    */
   private createControls = () => {
-    const renderer = new CSS2DRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.domElement.style.position = 'absolute';
-    renderer.domElement.style.top = '0px';
-    document.body.appendChild(renderer.domElement);
-    this.controls = new OrbitControls(this.camera, renderer.domElement);
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.autoRotate = true;
     this.controls.enableZoom = true;
     this.controls.enablePan = false;
