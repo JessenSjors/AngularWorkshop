@@ -1,30 +1,21 @@
-import {AfterViewInit, Component, Input} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { AnyLayer, Map } from "mapbox-gl";
-import {MapHolderService} from "../mapbox-holder.service";
 
 @Component({
   selector: 'app-mapbox-buildings',
   templateUrl: './mapbox-buildings.component.html',
   styleUrls: ['./mapbox-buildings.component.scss']
 })
-export class MapboxBuildingsComponent implements AfterViewInit{
+export class MapboxBuildingsComponent implements OnInit{
   public labelLayerId?: string;
-  @Input() test!: Map;
+  @Input() map!: Map;
 
-  constructor(private mapHolder: MapHolderService) {
-  }
-
-  ngAfterViewInit() {
-
-      this.onLoad();
-
+  ngOnInit() {
+    this.onLoad();
   }
 
   onLoad(): void {
-    console.log('Loading building: ',this.test);
-
-    const map: Map = this.mapHolder.getMap();
-    const layers = map.getStyle().layers;
+    const layers = this.map.getStyle().layers;
     if (!layers) {
       return;
     }

@@ -2,40 +2,9 @@
   [style]="'mapbox://styles/mapbox/streets-v9'"
   [zoom]="[15]"
   [center]="[148, -35]"
-  (load)="map = $event; load3DModel($event); load3DBuildingsLayer(map)"
+  (load)="map = $event; load3DModel($event);"
   [antialias]="true"
 >
-  <mgl-layer
-    id="3d-buildings"
-    source="composite"
-    sourceLayer="building"
-    [filter]="['==', 'extrude', 'true']"
-    type="fill-extrusion"
-    [minzoom]="15"
-    [paint]="{
-          'fill-extrusion-color': '#aaa',
-          'fill-extrusion-height': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            15,
-            0,
-            15.05,
-            ['get', 'height']
-          ],
-          'fill-extrusion-base': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            15,
-            0,
-            15.05,
-            ['get', 'min_height']
-          ],
-          'fill-extrusion-opacity': 0.6
-        }"
-    [before]="labelLayerId"
-  ></mgl-layer>
-
+  <app-mapbox-buildings *ngIf="map" [map]="map"></app-mapbox-buildings>
   <app-mapbox-markers-controller></app-mapbox-markers-controller>
 </mgl-map>
