@@ -1,7 +1,7 @@
 <mgl-map [style]="mapStyle" [zoom]="[15]" [center]="coordinates" (load)="map = $event;" [antialias]="true">
   <app-mapbox-three-model *ngIf="map" [map]="map"></app-mapbox-three-model>
   <app-mapbox-buildings *ngIf="map" [map]="map"></app-mapbox-buildings>
-<!--  <app-mapbox-markers-controller></app-mapbox-markers-controller>-->
+  <app-mapbox-controls></app-mapbox-controls>
   <app-mapbox-heatmap></app-mapbox-heatmap>
   <app-mapbox-gis-layers></app-mapbox-gis-layers>
 </mgl-map>

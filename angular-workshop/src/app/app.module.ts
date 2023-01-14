@@ -31,6 +31,7 @@ import { MapboxHeatmapComponent } from './components/mapbox-example/mapbox-heatm
 import { MapboxThreeModelComponent } from './components/mapbox-example/mapbox-three-model/mapbox-three-model.component';
 import { MapboxGisLayersComponent } from './components/mapbox-example/mapbox-gis-layers/mapbox-gis-layers.component';
 import {ToggleButtonModule} from "primeng/togglebutton";
+import { MapboxControlsComponent } from './components/mapbox-example/mapbox-controls/mapbox-controls.component';
 
 @NgModule({
   imports: [
@@ -70,6 +71,7 @@ import {ToggleButtonModule} from "primeng/togglebutton";
     MapboxHeatmapComponent,
     MapboxThreeModelComponent,
     MapboxGisLayersComponent,
+    MapboxControlsComponent,
   ],
   bootstrap: [ AppComponent ],
   providers: [HeroService]

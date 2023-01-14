@@ -1,0 +1,8 @@
+<mgl-control>
+  <p-button label="Custom control" class="custom-control" (click)="alert('Dit is een custom control')"></p-button>
+</mgl-control>
+<mgl-control mglFullscreen position="top-right"></mgl-control>
+<mgl-control mglGeocoder position="top-right"></mgl-control>
+<mgl-control mglGeolocate position="top-right" (geolocate)="onGeoLocate($event)"></mgl-control>
+<mgl-control mglNavigation position="top-right"></mgl-control>
+<mgl-control mglScale position="top-right"></mgl-control>
