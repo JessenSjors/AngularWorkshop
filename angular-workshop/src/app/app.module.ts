@@ -28,6 +28,7 @@ import { ItemOutputContainerComponent } from './components/output-example/item-o
 import { HeroService } from './components/hero-tutorial/hero.service';
 import { MapboxBuildingsComponent } from './components/mapbox-example/mapbox-buildings/mapbox-buildings.component';
 import { MapboxHeatmapComponent } from './components/mapbox-example/mapbox-heatmap/mapbox-heatmap.component';
+import { MapboxThreeModelComponent } from './components/mapbox-example/mapbox-three-model/mapbox-three-model.component';
 
 @NgModule({
   imports: [
@@ -64,6 +65,7 @@ import { MapboxHeatmapComponent } from './components/mapbox-example/mapbox-heatm
     DirectiveExampleComponent,
     MapboxBuildingsComponent,
     MapboxHeatmapComponent,
+    MapboxThreeModelComponent,
   ],
   bootstrap: [ AppComponent ],
   providers: [HeroService]
