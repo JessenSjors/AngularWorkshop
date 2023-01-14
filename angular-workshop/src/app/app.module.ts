@@ -27,6 +27,7 @@ import { CubeThreejsComponent } from './components/three-js-examples/cube-threej
 import { ItemOutputContainerComponent } from './components/output-example/item-output-container/item-output-container.component';
 import { HeroService } from './components/hero-tutorial/hero.service';
 import { MapboxBuildingsComponent } from './components/mapbox-example/mapbox-buildings/mapbox-buildings.component';
+import { MapboxHeatmapComponent } from './components/mapbox-example/mapbox-heatmap/mapbox-heatmap.component';
 
 @NgModule({
   imports: [
@@ -62,6 +63,7 @@ import { MapboxBuildingsComponent } from './components/mapbox-example/mapbox-bui
     HighlightDirective,
     DirectiveExampleComponent,
     MapboxBuildingsComponent,
+    MapboxHeatmapComponent,
   ],
   bootstrap: [ AppComponent ],
   providers: [HeroService]
