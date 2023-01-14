@@ -1,15 +1,9 @@
-<h1>{{ title }}</h1>
-
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-  <a routerLink="/item-output">Output</a>
-  <a routerLink="/mapbox">Mapbox</a>
-  <a routerLink="/three-js">Robot</a>
-  <a routerLink="/cube-three-js">Cube</a>
-</nav>
+<p-menubar [model]="items">
+  <ng-template pTemplate="start">
+    <b>{{ title }}</b>
+  </ng-template>
+</p-menubar>
 
 <!-- <app-directive-example></app-directive-example> -->
-
 <router-outlet></router-outlet>
 <app-messages></app-messages>

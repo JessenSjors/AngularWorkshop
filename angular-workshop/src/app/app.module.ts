@@ -34,6 +34,7 @@ import {ToggleButtonModule} from "primeng/togglebutton";
 import { MapboxControlsComponent } from './components/mapbox-example/mapbox-controls/mapbox-controls.component';
 import { MapboxStyleSwitcherComponent } from './components/mapbox-example/mapbox-style-switcher/mapbox-style-switcher.component';
 import {RadioButtonModule} from "primeng/radiobutton";
+import {MenubarModule} from "primeng/menubar";
 
 @NgModule({
   imports: [
@@ -53,7 +54,8 @@ import {RadioButtonModule} from "primeng/radiobutton";
       InMemoryDataService, {dataEncapsulation: false}
     ),
     ToggleButtonModule,
-    RadioButtonModule
+    RadioButtonModule,
+    MenubarModule
   ],
   declarations: [
     AppComponent,
