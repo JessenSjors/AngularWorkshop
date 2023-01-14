@@ -27,7 +27,7 @@ export class MapboxThreeModelImporterService
     this.scene.add(directionalLight2);
 
     // parameters to ensure the model is geo referenced correctly on the map
-    const modelOrigin = [148, -35];
+    const modelOrigin = [-71.97722138410576, -13.517379300798098];
     const modelAltitude = 0;
     const modelRotate = [Math.PI / 2, 0, 0];
 
