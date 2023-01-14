@@ -155,6 +155,10 @@ Hieronder een korte samenvatting van alle fundamentele concepten van Angular en 
 - Met [Mapbox](https://docs.mapbox.com/mapbox-gl-js/example/) kun je geografische kaarten toevoegen aan een web app
 - Op deze map kan data geprojecteerd worden in de vorm van *layers*. Deze layers kunnen vanalles bevatten: 3D modellen, markers (points of interest), icons, GIS data, heatmaps en meer
 - **ngx-mapbox** biedt de mogelijkheid om templates op te bouwen met behulp van *directives* op de 'Angular manier'
+- Om gebruik te maken van **ngx-mapbox** runnen we de volgende commands in de terminal:
+  - `npm i mapbox-gl --save`
+  - `npm i @types/mapbox-gl --save`
+  - `npm i ngx-mapbox-gl --save`
 
 ## ThreeJS & NG3
 

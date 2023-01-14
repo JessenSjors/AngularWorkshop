@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { MapboxThreeModelImporterService } from '../mapbox-three-model-importer.service';
-import { MapHolderService } from '../map-holder.service';
-import { Map } from 'mapbox-gl';
+import { CustomLayerInterface, Map } from 'mapbox-gl';
 
 @Component({
   selector: 'app-mapbox',
@@ -9,14 +8,12 @@ import { Map } from 'mapbox-gl';
   styleUrls: ['./mapbox.component.scss']
 })
 export class MapboxComponent {
-  constructor(
-    private threeModelImporter: MapboxThreeModelImporterService, 
-    private mapHolder: MapHolderService){
+  constructor(private threeModelImporter: MapboxThreeModelImporterService){
   }
 
-  public loadMap(map: Map): void {
-    // console.log(map);
-    this.threeModelImporter.addModelToLayer(map);
-    this.mapHolder.setMapRef(map);
+  public load3DModel(map: Map): void {
+    this.threeModelImporter.addModelToLayer(map).then((customLayer: CustomLayerInterface) => {
+        map.addLayer(customLayer, 'waterway-label');
+    });
   }
 }

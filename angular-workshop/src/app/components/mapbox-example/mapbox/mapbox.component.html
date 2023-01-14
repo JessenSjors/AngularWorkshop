@@ -1,9 +1,9 @@
-<mgl-map 
-    [style]="'mapbox://styles/mapbox/streets-v9'" 
-    [zoom]="[18]" 
-    [pitch]="[60]"
-    [center]="[148, -35]" 
-    (load)="loadMap($event)"
+<mgl-map
+    [style]="'mapbox://styles/mapbox/light-v11'"
+    [zoom]="[15]"
+    [center]="[148, -35]"
+    (load)="load3DModel($event)"
+    [antialias]="true"
 >
     <app-mapbox-markers-controller></app-mapbox-markers-controller>
 </mgl-map>
