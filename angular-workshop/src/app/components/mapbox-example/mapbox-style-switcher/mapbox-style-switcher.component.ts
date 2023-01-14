@@ -1,10 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-
-interface MapStyle
-{
-  name: string;
-  key: string;
-}
+import {IMapStyle} from "./map-style";
 
 @Component({
   selector: 'app-mapbox-style-switcher',
@@ -14,9 +9,8 @@ interface MapStyle
 export class MapboxStyleSwitcherComponent implements OnInit{
   @Output() updateMapStyleEvent = new EventEmitter<string>();
 
-  selectedStyle!: MapStyle;
-
-  styles: MapStyle[] = [
+  public selectedStyle!: IMapStyle;
+  public styles: IMapStyle[] = [
     {name: 'Basic', key: 'basic'},
     {name: 'Streets', key: 'streets'},
     {name: 'Bright', key: 'bright'},
@@ -28,7 +22,7 @@ export class MapboxStyleSwitcherComponent implements OnInit{
     this.selectedStyle = this.styles[3];
   }
 
-  public changeStyle(style: MapStyle) {
+  public changeStyle(style: IMapStyle) {
     this.selectedStyle = style;
     this.updateMapStyleEvent.emit(`mapbox://styles/mapbox/${style.key}-v9`);
   }
