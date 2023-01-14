@@ -29,10 +29,12 @@ import { HeroService } from './components/hero-tutorial/hero.service';
 import { MapboxBuildingsComponent } from './components/mapbox-example/mapbox-buildings/mapbox-buildings.component';
 import { MapboxHeatmapComponent } from './components/mapbox-example/mapbox-heatmap/mapbox-heatmap.component';
 import { MapboxThreeModelComponent } from './components/mapbox-example/mapbox-three-model/mapbox-three-model.component';
+import { MapboxGisLayersComponent } from './components/mapbox-example/mapbox-gis-layers/mapbox-gis-layers.component';
+import {ToggleButtonModule} from "primeng/togglebutton";
 
 @NgModule({
   imports: [
-    
+
     BrowserModule,
     FormsModule,
     AppRoutingModule,
@@ -45,8 +47,9 @@ import { MapboxThreeModelComponent } from './components/mapbox-example/mapbox-th
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+      InMemoryDataService, {dataEncapsulation: false}
+    ),
+    ToggleButtonModule
   ],
   declarations: [
     AppComponent,
@@ -66,6 +69,7 @@ import { MapboxThreeModelComponent } from './components/mapbox-example/mapbox-th
     MapboxBuildingsComponent,
     MapboxHeatmapComponent,
     MapboxThreeModelComponent,
+    MapboxGisLayersComponent,
   ],
   bootstrap: [ AppComponent ],
   providers: [HeroService]
