@@ -3,17 +3,23 @@ import { CommonModule } from '@angular/common';
 
 import { InputNumberModule } from 'primeng/inputnumber';
 import { ButtonModule } from 'primeng/button';
+import {RadioButtonModule} from "primeng/radiobutton";
+import {MenubarModule} from "primeng/menubar";
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     InputNumberModule,
-    ButtonModule
+    ButtonModule,
+    RadioButtonModule,
+    MenubarModule
   ],
   exports: [
     InputNumberModule,
-    ButtonModule
+    ButtonModule,
+    RadioButtonModule,
+    MenubarModule
   ]
 })
 export class PrimengModule { }

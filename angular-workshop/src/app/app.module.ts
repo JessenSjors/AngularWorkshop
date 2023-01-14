@@ -30,11 +30,8 @@ import { MapboxBuildingsComponent } from './components/mapbox-example/mapbox-bui
 import { MapboxHeatmapComponent } from './components/mapbox-example/mapbox-heatmap/mapbox-heatmap.component';
 import { MapboxThreeModelComponent } from './components/mapbox-example/mapbox-three-model/mapbox-three-model.component';
 import { MapboxGisLayersComponent } from './components/mapbox-example/mapbox-gis-layers/mapbox-gis-layers.component';
-import {ToggleButtonModule} from "primeng/togglebutton";
 import { MapboxControlsComponent } from './components/mapbox-example/mapbox-controls/mapbox-controls.component';
 import { MapboxStyleSwitcherComponent } from './components/mapbox-example/mapbox-style-switcher/mapbox-style-switcher.component';
-import {RadioButtonModule} from "primeng/radiobutton";
-import {MenubarModule} from "primeng/menubar";
 
 @NgModule({
   imports: [
@@ -52,10 +49,7 @@ import {MenubarModule} from "primeng/menubar";
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false}
-    ),
-    ToggleButtonModule,
-    RadioButtonModule,
-    MenubarModule
+    )
   ],
   declarations: [
     AppComponent,
