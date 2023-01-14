@@ -159,6 +159,7 @@ Hieronder een korte samenvatting van alle fundamentele concepten van Angular en 
   - `npm i mapbox-gl --save`
   - `npm i @types/mapbox-gl --save`
   - `npm i ngx-mapbox-gl --save`
+- ngx-mapbox [sandbox examples](https://github.com/Wykks/ngx-mapbox-gl/tree/main/apps/showcase/src/app/demo/examples)
 
 ## ThreeJS & NG3
 

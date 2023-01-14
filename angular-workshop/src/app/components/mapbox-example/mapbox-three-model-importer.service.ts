@@ -59,7 +59,6 @@ export class MapboxThreeModelImporterService
           scene.add(gltf.scene);
         });
         mapboxMap = map;
-        console.log(mapboxMap);
 
         // use the Mapbox GL JS map canvas for three.js
         renderer = new WebGLRenderer({
