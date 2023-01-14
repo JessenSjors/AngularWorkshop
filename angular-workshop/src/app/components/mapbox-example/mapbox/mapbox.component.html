@@ -1,4 +1,8 @@
 <mgl-map [style]="mapStyle" [zoom]="[18]" [center]="coordinates" (load)="map = $event;" [antialias]="true">
+  <mgl-control position="top-left">
+    <app-mapbox-style-switcher class="custom-control" (updateMapStyleEvent)="updateMapStyle($event)"></app-mapbox-style-switcher>
+  </mgl-control>
+
   <app-mapbox-three-model *ngIf="map" [map]="map"></app-mapbox-three-model>
   <app-mapbox-buildings *ngIf="map" [map]="map"></app-mapbox-buildings>
   <app-mapbox-controls></app-mapbox-controls>

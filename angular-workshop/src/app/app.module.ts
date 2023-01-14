@@ -32,6 +32,8 @@ import { MapboxThreeModelComponent } from './components/mapbox-example/mapbox-th
 import { MapboxGisLayersComponent } from './components/mapbox-example/mapbox-gis-layers/mapbox-gis-layers.component';
 import {ToggleButtonModule} from "primeng/togglebutton";
 import { MapboxControlsComponent } from './components/mapbox-example/mapbox-controls/mapbox-controls.component';
+import { MapboxStyleSwitcherComponent } from './components/mapbox-example/mapbox-style-switcher/mapbox-style-switcher.component';
+import {RadioButtonModule} from "primeng/radiobutton";
 
 @NgModule({
   imports: [
@@ -50,7 +52,8 @@ import { MapboxControlsComponent } from './components/mapbox-example/mapbox-cont
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false}
     ),
-    ToggleButtonModule
+    ToggleButtonModule,
+    RadioButtonModule
   ],
   declarations: [
     AppComponent,
@@ -72,6 +75,7 @@ import { MapboxControlsComponent } from './components/mapbox-example/mapbox-cont
     MapboxThreeModelComponent,
     MapboxGisLayersComponent,
     MapboxControlsComponent,
+    MapboxStyleSwitcherComponent,
   ],
   bootstrap: [ AppComponent ],
   providers: [HeroService]

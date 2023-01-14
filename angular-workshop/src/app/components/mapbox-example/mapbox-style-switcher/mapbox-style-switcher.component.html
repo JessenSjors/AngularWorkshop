@@ -1,0 +1,11 @@
+<div *ngFor="let style of styles" class="field-checkbox switcher">
+  <p-radioButton
+    name="style"
+    (onClick)="changeStyle(selectedStyle)"
+    [inputId]="style.key"
+    [value]="style"
+    [(ngModel)]="selectedStyle"
+  >
+  </p-radioButton>
+  <label [for]="style.key">{{style.name}}</label>
+</div>
