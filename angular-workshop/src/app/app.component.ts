@@ -18,11 +18,10 @@ export class AppComponent {
     {label: 'Cube', routerLink: ['/cube-three-js'] },
   ];
 
-  public information: any = 
+  public content: string = 
   `
-    # Header 1 \n
-    ## Header 2 \n 
-    ### Header 3 \n
-    Dit is een paragraaf
+    ## @Input
+
+    ![Input](https://angular.io/generated/images/guide/inputs-outputs/input.svg)
   `;
 }
