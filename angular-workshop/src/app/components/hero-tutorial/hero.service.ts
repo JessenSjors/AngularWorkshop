@@ -28,6 +28,21 @@ export class HeroService {
       );
   }
 
+  getHeroByName(): Observable<Hero[]> {
+    return this.http.get<Hero[]>(this.heroesUrl)
+      .pipe(
+        tap(heroes => { this.log('fetched heroes'); this.logHeroNames(heroes)} ),
+        map(heroes => heroes.filter(hero => hero.name === 'Dr. Nice')),
+        catchError(this.handleError<Hero[]>('getHeroes', []))
+      );
+  }
+
+  logHeroNames(heroes: Hero[]): void {
+    heroes.forEach(hero => {
+      console.log(hero.name);
+    });
+  }
+
   /** GET hero by id. Return `undefined` when id not found */
   getHeroNo404<Data>(id: number): Observable<Hero> {
     const url = `${this.heroesUrl}/?id=${id}`;
