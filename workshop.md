@@ -60,7 +60,7 @@ Deze workshop is toegespitst op het visualiseren van 3D en data in web apps. Dit
 - Vergelijkbaar met een attribute in Unity: zie de component decorator een beetje als een *monobehaviour attribute*
 - Koppelt metadata aan een class - in dit geval om een compoennt te definieren. Voorbeeld van de metadata zijn *lifecycle methods* zoals `OnInit`
 - Om een *Component* te maken gaan we we vanuit de *root* folder van ons project in de *app* folder. Dit doen we via de terminal (gebruik `cd [folder-naam]` om van directory te switchen)
-- Nu kunnen we een component aanmaken m.b.v. `ng generate compont [component-naam]`
+- Nu kunnen we een component aanmaken m.b.v. `ng generate component [component-naam]`
 
 ## Modules
 
@@ -71,6 +71,7 @@ Deze workshop is toegespitst op het visualiseren van 3D en data in web apps. Dit
 - Enigszins vergelijkbaar met een `namespace`; je bakent modules en components die behoren aan een onderdeel af van de andere onderdelen van de applicatie
 - Kunnen *components*, *service providers*, en andere code files bevatten afhankelijk van hun scope
 - Kunnen functionaliteit importeren wat geëxporteerd is uit andere NgModules, en kunnen zelf specificieke functionaliteit exporteren wat gebruikt kan worden door andere NgModules
+- Een component kun je aanmaken door de volgende command te runnen in de terminal `ng generate module [module-naam]`
 
 ## Pipes
 
