@@ -4,6 +4,9 @@
   </ng-template>
 </p-menubar>
 <br>
+{{ information | markdownToHtml }}
+<!-- <div [innerHtml]="information | markdownToHtml"></div> -->
+
 <!-- <app-directive-example></app-directive-example> -->
 <router-outlet></router-outlet>
 <app-messages></app-messages>

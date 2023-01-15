@@ -17,4 +17,12 @@ export class AppComponent {
     {label: 'Robot', routerLink: ['/three-js'] },
     {label: 'Cube', routerLink: ['/cube-three-js'] },
   ];
+
+  public information: any = 
+  `
+    # Header 1 \n
+    ## Header 2 \n 
+    ### Header 3 \n
+    Dit is een paragraaf
+  `;
 }

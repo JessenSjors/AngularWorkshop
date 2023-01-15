@@ -32,6 +32,7 @@ import { MapboxThreeModelComponent } from './components/mapbox-example/mapbox-th
 import { MapboxGisLayersComponent } from './components/mapbox-example/mapbox-gis-layers/mapbox-gis-layers.component';
 import { MapboxControlsComponent } from './components/mapbox-example/mapbox-controls/mapbox-controls.component';
 import { MapboxStyleSwitcherComponent } from './components/mapbox-example/mapbox-style-switcher/mapbox-style-switcher.component';
+import { MarkdownToHtmlPipe } from './pipes/markdown-to-html.pipe';
 
 @NgModule({
   imports: [
@@ -72,6 +73,7 @@ import { MapboxStyleSwitcherComponent } from './components/mapbox-example/mapbox
     MapboxGisLayersComponent,
     MapboxControlsComponent,
     MapboxStyleSwitcherComponent,
+    MarkdownToHtmlPipe,
   ],
   bootstrap: [ AppComponent ],
   providers: [HeroService]
