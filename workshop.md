@@ -141,10 +141,12 @@ Hieronder een korte samenvatting van alle fundamentele concepten van Angular en 
 
 ## Observables
 
-[RxJS](https://rxjs.dev/guide/overview) is een library voor het samenstellen van asynchrone en event-based programma's door het gebruik van *observable sequences*. RxJS biedt een core type, de **Observable**, satellite types (Observer, Schedulers, Subjects) en operators geïnspireerd door `Array` methods (`map`, `filter`, `reduce`, `every`, etc) die *asynchronous events* afhandelen als *collections*.
+[RxJS](https://rxjs.dev/guide/overview) (Reactive Extensions for JavaScript) is een library voor het samenstellen van asynchrone en event-based programma's door het gebruik van *observables*. 
+RxJS biedt een core type, de **Observable**, satellite types (Observer, Schedulers, Subjects) en operators geïnspireerd door `Array` methods (`map`, `filter`, `reduce`, `every`, etc) waarmee je *asynchronous events* kan afhandelen als *collections*.
+Kan gebruikt worden voor het afhandelen van *events#*, *user input*, *HTTP requests* en andere types van asynchrone data.
 
 - Vergelijkbaar met *observer pattern*
-- Je kunt je subscriben aan de observable; wanneer de observable data (bv. in de backend) wijzigt, dan zal dit ook automatisch in de front-end updaten
+- Je kunt je subscriben aan de observable en diens stream van values of events; wanneer de observable data (bv. in de backend) wijzigt, dan zal dit ook automatisch in de front-end updaten
 - Voorbeeld: je front-end weergeeft data uit een database. De database date update uiteraard regelmatig en deze changes moeten dan automatisch zichtbaar zijn in je front-end.
 
 > Laat OPK zien met Firebase database m.b.t. de *documents* hoe dit automatisch update
