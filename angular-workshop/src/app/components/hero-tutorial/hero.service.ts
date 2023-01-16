@@ -22,20 +22,42 @@ export class HeroService {
     //These are some additional examples of what you can do with Observables
     
     //  Update the value of count each second and trigger a notify to subscribers by using 'next' 
-    const clock$ = new Observable((observer) => {
-      //observer is the object which is emitted
+    const clock$ = new Observable(function(observer){{
+      // the observer is an object that is passed as an argument to the subscriber function when creating a new instance of an observable 
+      // and it's used to emit values, errors, and completion events from the observable.
       let count = 0;
       setInterval(() => {
         observer.next(count);
         count++;
       }, 1000);
-  });
+  }});
     
+  
     // subscribe to observable and callback each time the value is updated (subscriber will be notified) and the log the value
-    // Callback is the response (when a new/next value is emitted)
+    // Callback is the response (in this case: when a new/next 'value' is emitted)
     clock$.subscribe(value => console.log(value));
 
-    function testFunc(){}
+    // value => { ... } is the callback that is executed when the next event is emitted by the observable, 
+    // it will update the data property with the response and log it to the console.
+
+    const myObservable = new Observable(observer => {
+      let count = 0;
+      const intervalId = setInterval(() => {
+        observer.next(count);
+        count++;
+        if(count === 10) {
+          observer.complete();
+          clearInterval(intervalId);
+        }
+      }, 1000);
+    });
+    
+    myObservable.subscribe({
+      next: value => console.log(value),
+      complete: () => console.log("Stream completed")
+    });
+
+    function testFunc(){};
     testFunc.rick = "Rick";
     testFunc.hugo = "Hugo";
 
