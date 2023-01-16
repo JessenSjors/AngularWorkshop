@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
+import {Observable, of, Subscriber} from 'rxjs';
 import {catchError, map, tap} from 'rxjs/operators';
 import {MessageService} from './message.service';
 import { Hero } from 'src/app/interfaces/hero';
@@ -22,13 +22,14 @@ export class HeroService {
     //These are some additional examples of what you can do with Observables
     
     //  Update the value of count each second and trigger a notify to subscribers by using 'next' 
-    const clock$ = new Observable(function(observer) { {
+    const clock$ = new Observable((observer) => {
+      //observer is the object which is emitted
       let count = 0;
       setInterval(() => {
         observer.next(count);
         count++;
       }, 1000);
-  }});
+  });
     
     // subscribe to observable and callback each time the value is updated (subscriber will be notified) and the log the value
     // Callback is the response (when a new/next value is emitted)
