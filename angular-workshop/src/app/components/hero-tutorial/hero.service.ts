@@ -20,10 +20,10 @@ export class HeroService {
 
   private showObservableExamples(): void {
     //These are some additional examples of what you can do with Observables
-    
-    //  Update the value of count each second and trigger a notify to subscribers by using 'next' 
+
+    //  Update the value of count each second and trigger a notify to subscribers by using 'next'
     const clock$ = new Observable(function(observer){{
-      // the observer is an object that is passed as an argument to the subscriber function when creating a new instance of an observable 
+      // the observer is an object that is passed as an argument to the subscriber function when creating a new instance of an observable
       // and it's used to emit values, errors, and completion events from the observable.
       let count = 0;
       setInterval(() => {
@@ -31,13 +31,13 @@ export class HeroService {
         count++;
       }, 1000);
   }});
-    
-  
+
+
     // subscribe to observable and callback each time the value is updated (subscriber will be notified) and the log the value
     // Callback is the response (in this case: when a new/next 'value' is emitted)
     clock$.subscribe(value => console.log(value));
 
-    // value => { ... } is the callback that is executed when the next event is emitted by the observable, 
+    // value => { ... } is the callback that is executed when the next event is emitted by the observable,
     // it will update the data property with the response and log it to the console.
 
     const myObservable = new Observable(observer => {
@@ -51,7 +51,7 @@ export class HeroService {
         }
       }, 1000);
     });
-    
+
     myObservable.subscribe({
       next: value => console.log(value),
       complete: () => console.log("Stream completed")
@@ -62,6 +62,19 @@ export class HeroService {
     testFunc.hugo = "Hugo";
 
     console.log(testFunc.rick + testFunc.hugo);
+
+    function sayHello(name: string) {
+      console.log(`Hello, ${name}!`);
+    }
+
+    //A function is a block of code that can be defined and invoked separately from any particular object.
+    // Functions can be defined using the function keyword, and they can be called (invoked) using the function name followed by parentheses.
+    // Functions can also be stored as a variable or passed as an argument to another function.
+
+    // A method is a function that is associated with an object or class.
+    // Methods can be defined inside an object literal, constructor function,
+    // or class and they can be invoked using the dot notation.
+    sayHello('John');
   }
 
 
