@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 
 import { Hero } from '../../../interfaces/hero';
 import { HeroService } from '../hero.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-hero-detail',

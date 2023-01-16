@@ -14,10 +14,33 @@ export class HeroService {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
 
-  constructor(
-    private http: HttpClient,
-    private messageService: MessageService) {
+  constructor(private http: HttpClient, private messageService: MessageService) {
+    this.showObservableExamples();
   }
+
+  private showObservableExamples(): void {
+    //These are some additional examples of what you can do with Observables
+    
+    //  Update the value of count each second and trigger a notify to subscribers by using 'next' 
+    const clock$ = new Observable(function(observer) { {
+      let count = 0;
+      setInterval(() => {
+        observer.next(count);
+        count++;
+      }, 1000);
+  }});
+    
+    // subscribe to observable and callback each time the value is updated (subscriber will be notified) and the log the value
+    // Callback is the response (when a new/next value is emitted)
+    clock$.subscribe(value => console.log(value));
+
+    function testFunc(){}
+    testFunc.rick = "Rick";
+    testFunc.hugo = "Hugo";
+
+    console.log(testFunc.rick + testFunc.hugo);
+  }
+
 
   /** GET heroes from the server */
   getHeroes(): Observable<Hero[]> {
